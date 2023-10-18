@@ -1,6 +1,7 @@
 const userRoutes=require('express').Router()
 const data=require("../data")
-userRoutes.post('/register',(req,res)=>{
+const { specificMiddleware } = require('../middleware/auth')
+userRoutes.post('/register',specificMiddleware,(req,res)=>{
     res.send("user is register")
 })
 userRoutes.post('/login',(req,res)=>{
