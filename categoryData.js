@@ -88,4 +88,4 @@ const foodData=[
     {id:42, for:'food',title:'Mattar paneer',discription:'Mattar paneer is a popular vegetarian dish of North Indian origin, made with peas and paneer cheese in a garam masala-spiced tomato sauce. The rich, thick curry is a specialty of Punjab, but it is widely enjoyed throughout India. Traditionally, the dish is served either for lunch or dinner, accompanied by rice and Indian flatbreads such as naan, kulcha, roti, or paratha.', img:'https://cdn.tasteatlas.com//Images/Dishes/ef2e189156f642d989e433c2af47a584.jpg?w=905&h=510'}
  
 ]
-module.exports={homeData,bolywoodData,holywoodData,foodData,fitnessData}
+module.exports={homeData,bolywoodData,holywoodData,foodData,fitnessData,technologyData}

@@ -1,4 +1,4 @@
-const { homeData,bolywoodData, holywoodData, fitnessData, foodData } = require("../categoryData")
+const { homeData,bolywoodData, holywoodData, fitnessData, foodData, technologyData } = require("../categoryData")
 
 
 const home=(req,res)=>{
@@ -9,7 +9,7 @@ const bolywood=(req,res)=>{
     return res.send(bolywoodData)
 }
 const holywood=(req,res)=>{
-    return res.send(holywoodDataolywoodData)
+    return res.send(holywoodData)
 }
 const fitness=(req,res)=>{
     return res.send(fitnessData)
@@ -17,4 +17,7 @@ const fitness=(req,res)=>{
 const food=(req,res)=>{
     return res.send(foodData)
 }
-module.exports={home,bolywood,holywood,fitness,food}
+const technology=(req,res)=>{
+    return res.send(technologyData)
+}
+module.exports={home,bolywood,holywood,fitness,food,technology}
