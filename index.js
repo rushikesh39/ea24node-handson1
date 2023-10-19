@@ -1,24 +1,18 @@
-// const http=require('http')
-// const data = require('./data')
+const express=require('express')
+const app=express()
+const userRoutes=require("./routes/userRoutes")
+const category=require('./routes/categoryRoutes')
+const cors=require('cors')
+const { globalMiddleware } = require('./middleware/auth')
 
 
-// const sendData=JSON.stringify(data)
-// const app=http.createServer((req,res)=>{
-//     if(req.url==='/'){
-//         res.write('<h2>What is nodeJs</h2>')
-//         res.write('<p>Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a web browser</p>')
-//         res.end()
-//     }
-//     else if(req.url==='/about' && req.method=="POST"){ 
-//         res.write(sendData)
-//         res.end()
-//     }
-//     else{
-//         res.write("404 page not found")
-//         res.end()
-//     }
-    
-// })
-// app.listen(5000,()=>{
-//     console.log("server is running on port 5000")
-// })
+//global middleware
+// app.use(globalMiddleware)
+app.use(cors())
+app.use('/category',category)
+app.use("/api",userRoutes)
+
+app.listen(5000,()=>{
+    console.log("server is running on port 5000")
+})
+//specific middleware applied on userRoutes.js
